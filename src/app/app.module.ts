@@ -8,6 +8,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { TeamComponent } from './componentes/team/team.component';
 import { PrivacyComponent } from './componentes/privacy/privacy.component';
+import { ColaboracionesComponent } from './componentes/colaboraciones/colaboraciones.component';
+import { SociosComponent } from './componentes/socios/socios.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PrivacyComponent } from './componentes/privacy/privacy.component';
     FooterComponent,
     HomeComponent,
     TeamComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    ColaboracionesComponent,
+    SociosComponent
   ],
   imports: [
     BrowserModule,
