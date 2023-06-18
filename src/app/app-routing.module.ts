@@ -6,17 +6,31 @@ import { TeamComponent } from './componentes/team/team.component';
 import { PrivacyComponent } from './componentes/privacy/privacy.component';
 import {LoginComponent } from './componentes/login/login.component';
 import { ColaboracionesComponent } from './componentes/colaboraciones/colaboraciones.component';
+import { HeaderComponent } from './componentes/header/header.component';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'PYP', component: PrivacyComponent },
-  { path: 'login', component: LoginComponent},
-  { path: 'team', component: TeamComponent },
-  { path: 'colaboraciones', component: ColaboracionesComponent },
+const routes: Routes = [{
+   path: 'header-component',
+    component: HeaderComponent, 
+    children: [
+
+      // { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'PYP', component: PrivacyComponent },
+      // { path: 'login', component: LoginComponent},
+      { path: 'team', component: TeamComponent },
+      { path: 'colaboraciones', component: ColaboracionesComponent },
+
+  
+    ],
+  },
+  {
+    path: '',component: LoginComponent, 
+  },
+
+
   // { path: 'about', component: AboutComponent },
   // { path: 'contact', component: ContactComponent },
-  { path: '**', component: FooterComponent }
+  // { path: '**', component: FooterComponent }
 ];
 
 

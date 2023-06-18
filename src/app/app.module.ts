@@ -11,6 +11,7 @@ import { PrivacyComponent } from './componentes/privacy/privacy.component';
 import { ColaboracionesComponent } from './componentes/colaboraciones/colaboraciones.component';
 import { SociosComponent } from './componentes/socios/socios.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { HeaderComponent } from './componentes/header/header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './componentes/login/login.component';
     PrivacyComponent,
     ColaboracionesComponent,
     SociosComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
