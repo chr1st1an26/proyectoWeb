@@ -12,6 +12,7 @@ import { ColaboracionesComponent } from './componentes/colaboraciones/colaboraci
 import { SociosComponent } from './componentes/socios/socios.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { HeaderComponent } from './componentes/header/header.component';
+import { ProductosComponent } from './componentes/productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HeaderComponent } from './componentes/header/header.component';
     ColaboracionesComponent,
     SociosComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
