@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 <body>
- <div class="background">
+  <div class="background">
     <div class="shape"></div>
     <div class="shape"></div>
   </div>
@@ -18,66 +18,26 @@
       <h3>Login Here</h3>
     
       <label for="username">username</label>
-      <input type="text" placeholder="Email" id="username" >
+      <input type="text" placeholder="Email" id="username">
     
       <label for="password">password</label>
-      <input type="password" placeholder="password" id="password" >
+      <input type="password" placeholder="password" id="password">
     
-      <!-- <button (click)="Ingresar()"><a style=" text-decoration: none;">Log in</a></button> -->
-      <button><a href="/header-component/home" style=" text-decoration: none;">Log in</a></button>
+      <button><a routerLink="/header-component/home" style=" text-decoration: none;">Log in</a></button>
       <div class="social">
        <div class="go"><i style="font-size:22px;" class="fa-brands fa-google"></i><a href="https://www.gmail.com" style="text-decoration: none;">Google</a></div>
-       <div class="go"><i style="font-size:22px;" class="fa-brands fa-google"></i><a href="https://www.gmail.com" style="text-decoration: none;">Google</a></div>
+       <div class="fb"><i style="font-size:22px;" class="fa-brands fa-facebook-f"></i><a href="https://www.facebook.com" style="text-decoration: none;">Facebook</a></div>
+
 
        </div>
        </form>
-
+   
     
-    <div class="background">
-      <div class="shape"></div>
-      <div class="shape"></div>
-    </div>
-    
-
-   <!-- <div
-  class="w-100 vh-100 d-flex justify-content-center align-items-center bg-dark"
->
-  <div class="card w-50">
-    <h5 class="card-header">Login</h5>
-    <div class="card-body">
-     
-      
-      <form
-        action=""
-        class="d-flex flex-column justify-content-center"
-        [formGroup]="loginForm"
-        (ngSubmit)="login()"
-      >
-        <label for="">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          placeholder="Email"
-          formControlName="email"
-        />
-
-        <label for="" class="mt-3">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          placeholder="Password"
-          formControlName="password"
-        />
-
-        <button class="btn btn-primary my-3" type="submit" (click)="login()">Submit</button>
-      </form>
-
-      
-    </div>
-  </div>
-</div>  -->
-
   
       
 </body>
 </html>
+
+
+
+

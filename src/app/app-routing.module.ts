@@ -18,6 +18,7 @@ const routes: Routes = [{
       // { path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },
       { path: 'PYP', component: PrivacyComponent },
+      { path: 'random-names', component: RandomNamesComponent },
       // { path: 'login', component: LoginComponent},
       { path: 'team', component: TeamComponent },
       { path: 'random-names', component: RandomNamesComponent },
