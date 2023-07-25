@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VistaProdComponent } from '../vista-prod/vista-prod.component';
 
 
 @Component({

@@ -13,6 +13,7 @@ import { SociosComponent } from './componentes/socios/socios.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
+import { VistaProdComponent } from './componentes/vista-prod/vista-prod.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProductosComponent } from './componentes/productos/productos.component'
     SociosComponent,
     LoginComponent,
     HeaderComponent,
-    ProductosComponent
+    ProductosComponent,
+    VistaProdComponent
   ],
   imports: [
     BrowserModule,

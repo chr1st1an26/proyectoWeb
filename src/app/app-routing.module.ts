@@ -8,6 +8,7 @@ import {LoginComponent } from './componentes/login/login.component';
 import { ColaboracionesComponent } from './componentes/colaboraciones/colaboraciones.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
+import { VistaProdComponent } from './componentes/vista-prod/vista-prod.component';
 
 const routes: Routes = [{
    path: 'header-component',
@@ -20,7 +21,8 @@ const routes: Routes = [{
       // { path: 'login', component: LoginComponent},
       { path: 'team', component: TeamComponent },
       { path: 'colaboraciones', component: ColaboracionesComponent },
-      { path: 'productos', component: ProductosComponent}
+      { path: 'productos', component: ProductosComponent},
+      {path: 'vista-prod', component: VistaProdComponent}
 
   
     ],
