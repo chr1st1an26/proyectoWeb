@@ -1,50 +1,62 @@
 import { Component } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
+<<<<<<< Updated upstream
 // import { AuthService } from 'src/app/services/auth.service';
 // import { FormsModule } from '@angular/forms';
 // import {AngularFireModule} from '@angular/fire/compat';
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+=======
+import { FormsModule } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CrudService } from 'src/app/crud.service';
+import { AuthService } from 'src/app/auth.service';
+>>>>>>> Stashed changes
 
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+  loginForm = this.fb.group({
+    email: ['', [Validators.email, Validators.required]],
+    password: [
+      '',
+      [Validators.required, Validators.minLength(4), Validators.maxLength(30)],
+    ],
+  });
 
-  recordsRef: AngularFireList<any>;
-  private dbPath = '/users';
+  isInvalid: boolean = false;
 
-  constructor(private db: AngularFireDatabase) {
-    this.recordsRef = db.list<any>(this.dbPath);
-  }
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private crudService: CrudService,
+    private authService: AuthService
+  ) {}
 
-  usuario = {
-    email: '',
-    password: ''
-  }
+  login() {
+    this.isInvalid = false;
 
-  
+    // if (!this.loginForm.valid) {
+    //   this.isInvalid = true;
+    //   return;
+    // }
 
+    const { email, password } = this.loginForm.value;
 
-  Ingresar() {
-    this.recordsRef.push(this.usuario);
-  }
+    this.crudService.getAll().forEach((userList) => {
+      const user = userList.find((user) => user.email === email);
 
-  createRecord(record: any): void {
-    this.recordsRef.push(record);
-  }
-  
-  updateRecord(key: string, value: any): Promise<void> {
-    return this.recordsRef.update(key, value);
-  }
-  
-  deleteRecord(key: string): Promise<void> {
-    return this.recordsRef.remove(key);
-  }
-  
-  getRecordsList(): AngularFireList<any> {
-    return this.recordsRef;
+      if (user && user.password === password) {
+        this.authService.user = user;
+        this.authService.setIsAuth = true;
+        this.router.navigate(['/home']);
+      }
+      this.isInvalid = true;
+    });
   }
 }
+

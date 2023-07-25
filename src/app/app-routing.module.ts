@@ -10,8 +10,7 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 
 const routes: Routes = [{
-   path: 'header-component',
-    component: HeaderComponent, 
+   path: 'header-component', component: HeaderComponent, 
     children: [
 
       // { path: '', component: HomeComponent },
