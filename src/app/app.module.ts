@@ -17,10 +17,11 @@ import { ProductosComponent } from './componentes/productos/productos.component'
 import { FormsModule } from '@angular/forms';
 import {AngularFireModule} from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { firebaseConfig } from './firebase/firebase.config';
+// import { firebaseConfig } from './firebase/firebase.config';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore'
 import { ReactiveFormsModule } from '@angular/forms';
+import { RandomNamesComponent } from './componentes/random-names/random-names.component';
 
 
 
@@ -46,7 +47,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SociosComponent,
     LoginComponent,
     HeaderComponent,
-    ProductosComponent
+    ProductosComponent,
+    RandomNamesComponent
   ],
   imports: [
     BrowserModule,
@@ -55,9 +57,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AngularFireDatabaseModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    provideFirestore(() => getFirestore()),
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    // provideFirestore(() => getFirestore()),
   
   ],
   providers: [],

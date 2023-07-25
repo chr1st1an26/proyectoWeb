@@ -8,6 +8,7 @@ import {LoginComponent } from './componentes/login/login.component';
 import { ColaboracionesComponent } from './componentes/colaboraciones/colaboraciones.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
+import { RandomNamesComponent } from './componentes/random-names/random-names.component';
 
 const routes: Routes = [{
    path: 'header-component', component: HeaderComponent, 
@@ -18,6 +19,7 @@ const routes: Routes = [{
       { path: 'PYP', component: PrivacyComponent },
       // { path: 'login', component: LoginComponent},
       { path: 'team', component: TeamComponent },
+      { path: 'random-names', component: RandomNamesComponent },
       { path: 'colaboraciones', component: ColaboracionesComponent },
       { path: 'productos', component: ProductosComponent}
 
