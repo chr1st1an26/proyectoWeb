@@ -48,7 +48,8 @@ import { RandomNamesComponent } from './componentes/random-names/random-names.co
     LoginComponent,
     HeaderComponent,
     ProductosComponent,
-    RandomNamesComponent
+    RandomNamesComponent,
+    // VistaProdComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { ColaboracionesComponent } from './componentes/colaboraciones/colaboraci
 import { HeaderComponent } from './componentes/header/header.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 import { RandomNamesComponent } from './componentes/random-names/random-names.component';
+import { VistaProdComponent } from './componentes/vista-prod/vista-prod.component';
 
 const routes: Routes = [{
    path: 'header-component', component: HeaderComponent, 
@@ -21,7 +22,8 @@ const routes: Routes = [{
       { path: 'team', component: TeamComponent },
       { path: 'random-names', component: RandomNamesComponent },
       { path: 'colaboraciones', component: ColaboracionesComponent },
-      { path: 'productos', component: ProductosComponent}
+      { path: 'productos', component: ProductosComponent},
+      {path: 'vista-prod', component: VistaProdComponent}
 
   
     ],
