@@ -112,16 +112,31 @@
           </div>
         </section>
         
-        <div *ngIf="contenidoVisible !== null" class="product-container" [id]="'producto-' + contenidoVisible">
+        <!-- <div *ngIf="contenidoVisible !== null" class="product-container" [id]="'producto-' + contenidoVisible">
           <img class="product-img" [src]="productos[contenidoVisible - 1].imagen" alt="Producto">
           <h2 class="product-title">{{ productos[contenidoVisible - 1].titulo }}</h2>
           <p class="product-description">{{ productos[contenidoVisible - 1].contenido }}</p>
           <p class="product-quantity">Cantidad disponible: {{ contenidoVisible * 5 }}</p>
           <p class="product-price">{{ productos[contenidoVisible - 1].precio }}</p>
-          <button class="product-button">¡Lo quiero!</button>
-        </div>
+          <button class="product-button">
+          <a href="" style=" text-decoration: none; color: rgb(0, 0, 0);">¡Lo quiero!</a></button>
+        </div> -->
         
-                
+        <!-- Resto del código del template... -->
+
+<div *ngIf="contenidoVisible !== null" class="product-container" [id]="'producto-' + contenidoVisible">
+  <img class="product-img" [src]="productos[contenidoVisible - 1].imagen" alt="Producto">
+  <h2 class="product-title">{{ productos[contenidoVisible - 1].titulo }}</h2>
+  <p class="product-description">{{ productos[contenidoVisible - 1].contenido }}</p>
+  <p class="product-quantity">Cantidad disponible: {{ contenidoVisible * 5 }}</p>
+  <p class="product-price">{{ productos[contenidoVisible - 1].precio }}</p>
+  <button class="product-button">
+    <a [href]="productos[contenidoVisible - 1].archivo" style="text-decoration: none; color: rgb(0, 0, 0);" download>¡Lo quiero!</a>
+  </button>
+</div>
+
+<!-- Resto del código del template... -->
+
         
 
 </body>
