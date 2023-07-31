@@ -32,60 +32,113 @@
         </header>
        
         </div>
+    <!-- <section class="contenedor">
+          <div class="contenedor-items">
+
+            <div class="item" id="item-1">
+              <span class="titulo-item">Manual redes V1</span>
+              <img src="../../../assets/img/Productos/Manual 1.jpg" alt="" class="img-item">
+              <span class="precio-item">$15.000</span>
+              <button (click)="mostrarContenido(1)" id="boton-item-1" class="boton-item">Adquirir</button>
+            </div>
         
-    <section class="contenedor">
-        <!-- Contenedor de elementos -->
-        <div class="contenedor-items">
-            <div class="item">
-                <span class="titulo-item">Manual redes V1</span>
-                <img src="../../../assets/img/Productos/Manual 1.jpg" alt="" class="img-item">
-                <span class="precio-item">$15.000</span>
-                <button routerLink="/header-component/vista-prod" class="boton-item">Adquirir</button>
+
+            <div class="item" id="item-2">
+              <span class="titulo-item">Manual redes V2</span>
+              <img src="../../../assets/img/Productos/Manual 2.jpg" alt="" class="img-item">
+              <span class="precio-item">$25.000</span>
+              <button (click)="mostrarContenido(2)" id="boton-item-2" class="boton-item">Adquirir</button>
             </div>
-            <div class="item">
-                <span class="titulo-item">Manual redes v2</span>
-                <img src="../../../assets/img/Productos/Manual 2.jpg" alt="" class="img-item">
-                <span class="precio-item">$25.000</span>
-                <button class="boton-item" href="./../../../assets/pdf/manual redes 2.pdf">Adquiri</button>
+        
+     
+            <div class="item" id="item-3">
+              <span class="titulo-item">Manual redes V3</span>
+              <img src="../../../assets/img/Productos/Manual 3.png" alt="" class="img-item">
+              <span class="precio-item">$35.000</span>
+              <button (click)="mostrarContenido(3)" id="boton-item-3" class="boton-item">Adquirir</button>
             </div>
-            <div class="item">
-                <span class="titulo-item">Manual redes v3</span>
-                <img src="../../../assets/img/Productos/Manual 3.png" alt="" class="img-item">
-                <span class="precio-item">$35.000</span>
-                <button class="boton-item" href="./../../../assets/pdf/manual redes 3.pdf">Adquiri</button>
+        
+
+            <div class="item" id="item-4">
+              <span class="titulo-item">Curso Angular principiante</span>
+              <img src="../../../assets/img/Productos/an.png" alt="" class="img-item">
+              <span class="precio-item">$18.000</span>
+              <button (click)="mostrarContenido(4)" id="boton-item-4" class="boton-item">Adquirir</button>
             </div>
-            <div class="item">
-                <span class="titulo-item">Curso Angular principiante</span>
-                <img src="../../../assets/img/Productos/an.png" alt="" class="img-item">
-                <span class="precio-item">$18.000</span>
-                <button class="boton-item">Adquiri</button>
+
+            <div class="item" id="item-5">
+              <span class="titulo-item">Curso front-end Básico</span>
+              <img src="../../../assets/img/Productos/front.png" alt="" class="img-item">
+              <span class="precio-item">$32.000</span>
+              <button (click)="mostrarContenido(5)" id="boton-item-5" class="boton-item">Adquirir</button>
             </div>
-            <div class="item">
-                <span class="titulo-item">Curso front-end Básico</span>
-                <img src="../../../assets/img/Productos/front.png" alt="" class="img-item">
-                <span class="precio-item">$32.000</span>
-                <button class="boton-item">Adquiri</button>
+        
+
+            <div class="item" id="item-6">
+              <span class="titulo-item">Curso Experiencia de Usuario</span>
+              <img src="../../../assets/img/Productos/experiencia.png" alt="" class="img-item">
+              <span class="precio-item">$54.000</span>
+              <button (click)="mostrarContenido(6)" id="boton-item-6" class="boton-item">Adquirir</button>
             </div>
-            <div class="item">
-                <span class="titulo-item">Curso Experiencia de Usuario</span>
-                <img src="../../../assets/img/Productos/experiencia.png" alt="" class="img-item">
-                <span class="precio-item">$54.000</span>
-                <button class="boton-item">Adquiri</button>
+        
+
+            <div class="item" id="item-7">
+              <span class="titulo-item">Curso React js Principiante</span>
+              <img src="../../../assets/img/Productos/js.png" alt="" class="img-item">
+              <span class="precio-item">$18.000</span>
+              <button (click)="mostrarContenido(7)" id="boton-item-7" class="boton-item">Adquirir</button>
             </div>
-            <div class="item">
-                <span class="titulo-item">Curso React js Principiante</span>
-                <img src="../../../assets/img/Productos/js.png" alt="" class="img-item">
-                <span class="precio-item">$18.000</span>
-                <button class="boton-item">Adquiri</button>
+        
+
+            <div class="item" id="item-8">
+              <span class="titulo-item">Calcas de nuestra empresa</span>
+              <img src="../../../assets/img/logoN.png" alt="" class="img-item">
+              <span class="precio-item">$32.000</span>
+              <button (click)="mostrarContenido(8)" id="boton-item-8" class="boton-item">Adquirir</button>
             </div>
-            <div class="item">
-                <span class="titulo-item">Calcas de nuestra empresa</span>
-                <img src="../../../assets/img/logoN.png"alt="" class="img-item">
-                <span class="precio-item">$32.000</span>
-                <button class="boton-item">Adquiri</button>
+          </div>
+        </section> -->
+
+
+
+        <section class="contenedor">
+          <div class="contenedor-items">
+            <div *ngFor="let producto of productos; let i = index" class="item" [id]="'item-' + (i + 1)">
+              <span class="titulo-item">{{ producto.titulo }}</span>
+              <img [src]="producto.imagen" alt="" class="img-item">
+              <span class="precio-item">{{ producto.precio }}</span>
+              <button (click)="mostrarContenido(i + 1)" [id]="'boton-item-' + (i + 1)" class="boton-item">Adquirir</button>
             </div>
-        </div>
-    </section>
+          </div>
+        </section>
+        
+        <!-- <div *ngIf="contenidoVisible !== null" class="product-container" [id]="'producto-' + contenidoVisible">
+          <img class="product-img" [src]="productos[contenidoVisible - 1].imagen" alt="Producto">
+          <h2 class="product-title">{{ productos[contenidoVisible - 1].titulo }}</h2>
+          <p class="product-description">{{ productos[contenidoVisible - 1].contenido }}</p>
+          <p class="product-quantity">Cantidad disponible: {{ contenidoVisible * 5 }}</p>
+          <p class="product-price">{{ productos[contenidoVisible - 1].precio }}</p>
+          <button class="product-button">
+          <a href="" style=" text-decoration: none; color: rgb(0, 0, 0);">¡Lo quiero!</a></button>
+        </div> -->
+        
+        <!-- Resto del código del template... -->
+
+<div *ngIf="contenidoVisible !== null" class="product-container" [id]="'producto-' + contenidoVisible">
+  <img class="product-img" [src]="productos[contenidoVisible - 1].imagen" alt="Producto">
+  <h2 class="product-title">{{ productos[contenidoVisible - 1].titulo }}</h2>
+  <p class="product-description">{{ productos[contenidoVisible - 1].contenido }}</p>
+  <p class="product-quantity">Cantidad disponible: {{ contenidoVisible * 5 }}</p>
+  <p class="product-price">{{ productos[contenidoVisible - 1].precio }}</p>
+  <button class="product-button">
+    <a [href]="productos[contenidoVisible - 1].archivo" style="text-decoration: none; color: rgb(0, 0, 0);" download>¡Lo quiero!</a>
+  </button>
+</div>
+
+<!-- Resto del código del template... -->
+
+        <!--xd-->
+
 </body>
 </html>
 

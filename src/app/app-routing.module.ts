@@ -4,18 +4,20 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { TeamComponent } from './componentes/team/team.component';
 import { PrivacyComponent } from './componentes/privacy/privacy.component';
-import {LoginComponent } from './componentes/login/login.component';
+import { LoginComponent } from './componentes/login/login.component';
 import { ColaboracionesComponent } from './componentes/colaboraciones/colaboraciones.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 import { RandomNamesComponent } from './componentes/random-names/random-names.component';
 import { VistaProdComponent } from './componentes/vista-prod/vista-prod.component';
 import { VistaCompraComponent } from './componentes/vista-compra/vista-compra.component';
+import { RegistroComponent } from './componentes/registro/registro.component';
 
-const routes: Routes = [{
-   path: 'header-component', component: HeaderComponent, 
+const routes: Routes = [
+  {
+    path: 'header-component',
+    component: HeaderComponent,
     children: [
-
       // { path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },
       { path: 'PYP', component: PrivacyComponent },
@@ -32,20 +34,20 @@ const routes: Routes = [{
     ],
   },
   {
-    path: '',component: LoginComponent, 
-  },
-
-
+    path: 'registro', // Move 'registro' outside the 'children' array
+    component: RegistroComponent,
+  },
+  {
+    path: '',
+    component: LoginComponent,
+  },
   // { path: 'about', component: AboutComponent },
   // { path: 'contact', component: ContactComponent },
   // { path: '**', component: FooterComponent }
-
-  
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
