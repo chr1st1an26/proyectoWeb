@@ -22,6 +22,7 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore'
 import { ReactiveFormsModule } from '@angular/forms';
 import { RandomNamesComponent } from './componentes/random-names/random-names.component';
+import { VistaCompraComponent } from './componentes/vista-compra/vista-compra.component';
 
 
 
@@ -49,6 +50,7 @@ import { RandomNamesComponent } from './componentes/random-names/random-names.co
     HeaderComponent,
     ProductosComponent,
     RandomNamesComponent,
+    VistaCompraComponent,
     // VistaProdComponent
   ],
   imports: [
