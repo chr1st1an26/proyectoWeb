@@ -12,6 +12,7 @@ import { RandomNamesComponent } from './componentes/random-names/random-names.co
 import { VistaProdComponent } from './componentes/vista-prod/vista-prod.component';
 import { VistaCompraComponent } from './componentes/vista-compra/vista-compra.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
+import { FormularioComponent } from './componentes/formulario/formulario.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,8 @@ const routes: Routes = [
       { path: 'colaboraciones', component: ColaboracionesComponent },
       { path: 'productos', component: ProductosComponent},
       {path: 'vista-prod', component: VistaProdComponent},
-      {path: 'vista-compra', component: VistaCompraComponent}
+      {path: 'vista-compra', component: VistaCompraComponent},
+      {path: 'formulario', component: FormularioComponent}
 
   
     ],
