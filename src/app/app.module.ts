@@ -24,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RandomNamesComponent } from './componentes/random-names/random-names.component';
 import { VistaCompraComponent } from './componentes/vista-compra/vista-compra.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
+import { FormularioComponent } from './componentes/formulario/formulario.component';
 
 
 // const firebaseConfig = {
@@ -51,7 +52,8 @@ import { RegistroComponent } from './componentes/registro/registro.component';
     ProductosComponent,
     RandomNamesComponent,
     VistaCompraComponent,
-    RegistroComponent
+    RegistroComponent,
+    FormularioComponent
     // VistaProdComponent
   ],
   imports: [
