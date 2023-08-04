@@ -1,6 +1,3 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { VistaProdComponent } from './vista-prod.component';
-
 
 
 import { Component } from '@angular/core';
